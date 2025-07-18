@@ -32,6 +32,20 @@
     }
   </script>
   <link rel="icon" type="image/jpeg" href="Favicon.jpg" />
+
+  <script>
+  function scrollToSection(id) {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
 </head>
 
 <body class="bg-white text-gray-900">
@@ -42,12 +56,12 @@
         Navroop Singh
       </h1>
 
-          <ul class="flex gap-6 text-sm">
-      <li><a href="#about" class="hover:underline">About</a></li>
-      <li><a href="#projects" class="hover:underline">Projects</a></li>
-      <li><a href="#skills" class="hover:underline">Skills</a></li>
-      <li><a href="#contact" class="hover:underline">Contact</a></li>
-    </ul>
+      <ul class="flex gap-6 text-sm">
+        <li><a href="javascript:void(0);" onclick="scrollToSection('about')" class="hover:underline">About</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToSection('projects')" class="hover:underline">Projects</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToSection('skills')" class="hover:underline">Skills</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToSection('contact')" class="hover:underline">Contact</a></li>
+      </ul>
   </nav>
 
 <!-- Back to Top Button -->
@@ -70,11 +84,8 @@
             A tech-driven problem solver passionate about optimizing systems, supporting teams, and building a future in IT Help Desk and CloudOps.
           </p>
           
-        <a
-          href="#experience"
-          class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition"
-        >
-          See My Experience
+        <a href="javascript:void(0);" onclick="scrollToSection('experience')" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">
+           See My Experience
         </a>
       </div>
   
