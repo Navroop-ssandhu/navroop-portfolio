@@ -4,235 +4,167 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
-
-
   <title>Navroop Singh | Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
- 
   <script>
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-  </script>
-  
-  <script>
-    function copyEmail() {
-      const email = "navroopsandhu825@gmail.com";
-      navigator.clipboard.writeText(email);
-      
-      const copiedText = document.getElementById("copied-text");
-      copiedText.classList.remove("hidden");
-  
-      setTimeout(() => {
-        copiedText.classList.add("hidden");
-      }, 2000);
-    }
+    function scrollToSection(id){const el=document.getElementById(id);if(el){el.scrollIntoView({behavior:"smooth"});}}
+    function scrollToTop(){window.scrollTo({top:0,behavior:"smooth"});}
+    function copyEmail(){const e="navroopsandhu825@gmail.com";navigator.clipboard.writeText(e);const t=document.getElementById("copied-text");t.classList.remove("hidden");setTimeout(()=>{t.classList.add("hidden");},2000);}
   </script>
   <link rel="icon" type="image/jpeg" href="Favicon.jpg" />
-
-  <script>
-  function scrollToSection(id) {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-</script>
-
 </head>
-
 <body class="bg-white text-gray-900">
-
-  <!-- Navbar -->
   <nav class="p-4 flex justify-between items-center shadow">
-    <h1 class="text-4xl text-gray-800 tracking-wide" style="font-family: 'Alex Brush', cursive;">
-        Navroop Singh
-      </h1>
-
-      <ul class="flex gap-6 text-sm">
-        <li><a href="javascript:void(0);" onclick="scrollToSection('about')" class="hover:underline">About</a></li>
-        <li><a href="javascript:void(0);" onclick="scrollToSection('projects')" class="hover:underline">Projects</a></li>
-        <li><a href="javascript:void(0);" onclick="scrollToSection('skills')" class="hover:underline">Skills</a></li>
-        <li><a href="javascript:void(0);" onclick="scrollToSection('contact')" class="hover:underline">Contact</a></li>
-      </ul>
+    <h1 class="text-4xl text-gray-800 tracking-wide" style="font-family:'Alex Brush',cursive;">Navroop Singh</h1>
+    <ul class="flex gap-6 text-sm">
+      <li><a href="javascript:void(0);" onclick="scrollToSection('about')" class="hover:underline">About</a></li>
+      <li><a href="javascript:void(0);" onclick="scrollToSection('projects')" class="hover:underline">Projects</a></li>
+      <li><a href="javascript:void(0);" onclick="scrollToSection('skills')" class="hover:underline">Skills</a></li>
+      <li><a href="javascript:void(0);" onclick="scrollToSection('contact')" class="hover:underline">Contact</a></li>
+    </ul>
   </nav>
 
-<!-- Back to Top Button -->
-<button onclick="scrollToTop()" 
-  class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1"
-  title="Back to Top">
-  ⬆️
-</button>
+  <button onclick="scrollToTop()" class="fixed bottom-6 right-6 z-50 bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1" title="Back to Top">⬆️</button>
 
-<!-- Hero Section -->
-<section class="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white px-6">
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-b from-blue-50 to-white px-6">
     <div class="flex flex-col-reverse md:flex-row items-center max-w-6xl gap-10">
-  
-      <!-- Text Content -->
       <div>
-        <h1 class="text-4xl font-bold text-gray-800 dark:text-black mb-4">
-            Hi, I'm Navroop
-          </h1>
-          <p class="text-lg text-gray-600 dark:text-black-300 mb-6 max-w-xl">
-            A tech-driven problem solver passionate about optimizing systems, supporting teams, and building a future in IT Help Desk and CloudOps.
-          </p>
-          
-        <a href="javascript:void(0);" onclick="scrollToSection('experience')" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">
-           See My Experience
-        </a>
+        <h1 class="text-4xl font-bold text-gray-800 mb-4">Hi, I'm Navroop</h1>
+        <p class="text-lg text-gray-600 mb-6 max-w-xl">A tech-driven problem solver passionate about optimizing systems, supporting teams, and building a future in IT Help Desk and CloudOps.</p>
+        <a href="javascript:void(0);" onclick="scrollToSection('experience')" class="inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition">See My Experience</a>
       </div>
-  
-      <!-- Profile Picture -->
-      <div class="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden shadow-lg border-4 border-white dark:border-gray-700">
+      <div class="w-40 h-40 md:w-56 md:h-56 rounded-full overflow-hidden shadow-lg border-4 border-white">
         <img src="Navroop-Image.png" alt="Navroop" class="w-full h-full object-cover" />
       </div>
-  
     </div>
   </section>
-  
+
   <section id="about" class="bg-white py-16 px-6">
     <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
-  
-    <!-- Row 1 -->
-    <div class="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto mb-12">
-      <img src="Who-am-I.jpg" alt="About 1" class="rounded-lg shadow-md">
-      <div>
-        <h3 class="text-xl font-semibold mb-2">Who I Am</h3>
-        <p class="text-gray-700">I'm Navroop Singh, a Computer Systems Technician graduate with a focus on IT support, cloud services, and modern tech. I believe in building stable systems with smart solutions.</p>
+
+    <div class="border border-gray-300 rounded-xl p-6 max-w-6xl mx-auto mb-12 shadow-sm">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="Who-am-I-.jpg" alt="About 1" class="rounded-lg shadow-md">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Who I Am</h3>
+          <p class="text-gray-700">I'm Navroop Singh, a Computer Systems Technician graduate with a focus on IT support, cloud services, and modern tech. I believe in building stable systems with smart solutions.</p>
+        </div>
       </div>
     </div>
-  
-    <!-- Row 2 -->
-    <div class="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto mb-12">
-      <div>
-        <h3 class="text-xl font-semibold mb-2">What I Do</h3>
-        <p class="text-gray-700">From streamlining school data systems in rural India to maintaining safety at high-profile events across Toronto, I’ve developed a strong work ethic, attention to detail, and the ability to stay calm under pressure. I now bring these qualities into the IT support and administration field.</p>
-      </div>
-      <img src="what-i-do.jpg" alt="About 2" class="rounded-lg shadow-md">
-    </div>
-  
-    <!-- Row 3 -->
-    <div class="grid md:grid-cols-2 gap-10 items-center max-w-6xl mx-auto mb-12">
-      <img src="heading-towards.jpg" alt="About 3" class="rounded-lg shadow-md">
-      <div>
-        <h3 class="text-xl font-semibold mb-2">Where I'm Headed</h3>
-        <p class="text-gray-700">I’m building a career in IT Help Desk and Cloud Operations, driven by a passion for solving real-world tech issues, continuous learning, and a strong commitment to user support and system reliability.</p>
+
+    <div class="border border-gray-300 rounded-xl p-6 max-w-6xl mx-auto mb-12 shadow-sm">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">What I Do</h3>
+          <p class="text-gray-700">From streamlining school data systems in rural India to maintaining safety at high-profile events across Toronto, I’ve developed a strong work ethic, attention to detail, and the ability to stay calm under pressure. I now bring these qualities into the IT support and administration field.</p>
+        </div>
+        <img src="what-i-do2.jpg" alt="About 2" class="rounded-lg shadow-md">
       </div>
     </div>
-  
-    <!-- Final Statement -->
+
+    <div class="border border-gray-300 rounded-xl p-6 max-w-6xl mx-auto mb-12 shadow-sm">
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <img src="heading-towards-.jpg" alt="About 3" class="rounded-lg shadow-md">
+        <div>
+          <h3 class="text-xl font-semibold mb-2">Where I'm Headed</h3>
+          <p class="text-gray-700">I’m building a career in IT Help Desk and Cloud Operations, driven by a passion for solving real-world tech issues, continuous learning, and a strong commitment to user support and system reliability.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="text-center max-w-3xl mx-auto mt-12">
       <p class="text-xl italic text-gray-600 border-t pt-6">“Challenges don’t stop me. I face them head-on and turn them into progress.”</p>
     </div>
   </section>
-  
 
-  <!--Work Experience-->
   <section id="experience" class="bg-gray-50 py-12 px-6">
-    <h2 class="text-2xl font-bold text-center mb-10">Work Experience</h2>
-    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-  
-      <!-- Job 1 -->
-      <div class="bg-white p-5 rounded-lg shadow-md flex items-start gap-4">
-        <img src="PSEB.jpg" alt="Secondary School Logo" class="w-14 h-14 rounded-full object-cover mt-1">
-        <div>
-          <h3 class="text-lg font-semibold">IT & Admin Support Assistant</h3>
-          <p class="text-sm text-gray-600">Government Secondary School Kacha Pakka, Punjab, India</p>
-          <p class="text-sm text-gray-500 italic">June 2022 – July 2023</p>
-          <p class="text-sm text-gray-700 mt-2">
-            Provided IT and administrative support across departments. Coordinated with education board systems and optimized data entry workflows during remote learning phase.
-          </p>
-        </div>
-      </div>
-  
-      <!-- Job 2 -->
-      <div class="bg-white p-5 rounded-lg shadow-md flex items-start gap-4">
-        <img src="PSEB.jpg" alt="Logo" class="w-14 h-14 rounded-full object-cover mt-1">
-        <div>
-          <h3 class="text-lg font-semibold">Admin & IT Support Assistant</h3>
-          <p class="text-sm text-gray-600">Government Middle School, Manakpur, Punjab, India</p>
-          <p class="text-sm text-gray-500 italic">Mar 2020 – Mar 2022</p>
-          <p class="text-sm text-gray-700 mt-2">
-            Maintained online student records, attendance tracking, and academic data using MS Excel during COVID-19. Assisted staff with technical issues and migrated legacy data formats.
-          </p>
-        </div>
-      </div>
-      <!-- Job 3 -->
-      <div class="bg-white p-5 rounded-lg shadow-md flex items-start gap-4">
-        <img src="Sword.png" alt="Sword Security Logo" class="w-14 h-14 rounded-full object-cover mt-1">
-        <div>
-          <h3 class="text-lg font-semibold">Security Guard</h3>
-          <p class="text-sm text-gray-600">Sword Security</p>
-          <p class="text-sm text-gray-500 italic">June 2024 – Present</p>
-          <p class="text-sm text-gray-700 mt-2">
-            Monitored access points at large-scale public events, communicated with event teams via radio, and maintained a secure environment across zones.
-          </p>
-        </div>
-      </div>
-  
-      <!-- Job 4 -->
-      <div class="bg-white p-5 rounded-lg shadow-md flex items-start gap-4">
-        <img src="Securtrust.png" alt="SecurTrust Logo" class="w-14 h-14 rounded-full object-cover mt-1">
-        <div>
-          <h3 class="text-lg font-semibold">Security Guard</h3>
-          <p class="text-sm text-gray-600">SecurTrust Protection</p>
-          <p class="text-sm text-gray-500 italic">Jan 2024 – Present</p>
-          <p class="text-sm text-gray-700 mt-2">
-            Provided event and site-based security. Conducted patrols, responded to incidents, and ensured adherence to safety protocols for clients and visitors.
-          </p>
-        </div>
-      </div>
-  
-    </div>
-  </section>
-  
-  <section id="achievements" class="py-20 px-4 bg-gray-50 dark:bg-gray-900">
-    <h2 class="text-3xl font-bold text-center text-gray-900 dark:text-white mb-10">
-      Highlight
-    </h2>
-    <div class="max-w-4xl mx-auto flex justify-center">
-      <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 w-full sm:w-[500px]">
-        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-          Built This Portfolio (2025)
-        </h3>
-        <p class="text-gray-600 dark:text-gray-300">
-          Designed and developed this personal portfolio from scratch to showcase my journey, skills, and focus on IT Help Desk, Administrative Assistant and CloudOps roles.
-        </p>
-      </div>
-    </div>
-  </section>
-  
+  <h2 class="text-2xl font-bold text-center mb-10">Work Experience</h2>
+  <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 
-<!-- Projects -->
-<section id="projects" class="bg-gray-100 p-8">
+    <div class="bg-white p-5 rounded-lg shadow-md flex items-start gap-4">
+      <img src="Sword.png" alt="Sword Security Logo" class="w-14 h-14 rounded-full object-cover mt-1">
+      <div>
+        <h3 class="text-lg font-semibold">Security Guard</h3>
+        <p class="text-sm text-gray-600">Sword Security</p>
+        <p class="text-sm text-gray-500 italic">June 2024 – Present</p>
+        <p class="text-sm text-gray-700 mt-2">Monitored access points at large-scale public events, communicated with event teams via radio, and maintained a secure environment across zones.</p>
+      </div>
+    </div>
+
+    <div class="bg-white p-5 rounded-lg shadow-md flex items-start gap-4">
+      <img src="Securtrust.png" alt="SecurTrust Logo" class="w-14 h-14 rounded-full object-cover mt-1">
+      <div>
+        <h3 class="text-lg font-semibold">Security Guard</h3>
+        <p class="text-sm text-gray-600">SecurTrust Protection</p>
+        <p class="text-sm text-gray-500 italic">Jan 2024 – Present</p>
+        <p class="text-sm text-gray-700 mt-2">Provided event and site-based security. Conducted patrols, responded to incidents, and ensured adherence to safety protocols for clients and visitors.</p>
+      </div>
+    </div>
+
+    <div class="bg-white p-5 rounded-lg shadow-md flex items-start gap-4">
+      <img src="PSEB.jpg" alt="Secondary School Logo" class="w-14 h-14 rounded-full object-cover mt-1">
+      <div>
+        <h3 class="text-lg font-semibold">IT & Admin Support Assistant</h3>
+        <p class="text-sm text-gray-600">Government Secondary School Kacha Pakka, Punjab, India</p>
+        <p class="text-sm text-gray-500 italic">June 2022 – July 2023</p>
+        <p class="text-sm text-gray-700 mt-2">Provided IT and administrative support across departments. Coordinated with education board systems and optimized data entry workflows during remote learning phase.</p>
+      </div>
+    </div>
+
+    <div class="bg-white p-5 rounded-lg shadow-md flex items-start gap-4">
+      <img src="PSEB.jpg" alt="PSEB Logo" class="w-14 h-14 rounded-full object-cover mt-1">
+      <div>
+        <h3 class="text-lg font-semibold">Admin & IT Support Assistant</h3>
+        <p class="text-sm text-gray-600">Government Middle School, Manakpur, Punjab, India</p>
+        <p class="text-sm text-gray-500 italic">Mar 2020 – Mar 2022</p>
+        <p class="text-sm text-gray-700 mt-2">Maintained online student records, attendance tracking, and academic data using MS Excel during COVID-19. Assisted staff with technical issues and migrated legacy data formats.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <section id="certifications" class="p-10 bg-white">
+    <h2 class="text-3xl font-semibold mb-8 text-center text-gray-800">Certifications</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow p-4 text-center">
+        <img src="CompTIA_A_2B.png" alt="CompTIA A+ Certification" class="mx-auto h-48 object-contain rounded">
+        <h3 class="mt-4 font-semibold text-gray-800 text-lg">CompTIA A+ (2025)</h3>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 text-center">
+        <img src="predictive-pmo.jpeg" alt="Predictive Project Management Certificate" class="mx-auto h-48 object-contain rounded">
+        <h3 class="mt-4 font-semibold text-gray-800 text-lg">Predictive Project Management</h3>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 text-center">
+        <img src="Agile.jpeg" alt="Agile Project Management Certificate" class="mx-auto h-48 object-contain rounded">
+        <h3 class="mt-4 font-semibold text-gray-800 text-lg">Agile Project Management</h3>
+      </div>
+      <div class="bg-white rounded-lg shadow p-4 text-center">
+        <img src="Hubspot-badge.png" alt="HubSpot Inbound Marketing Certificate" class="mx-auto h-48 object-contain rounded">
+        <h3 class="mt-4 font-semibold text-gray-800 text-lg">HubSpot Inbound Marketing</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="bg-gray-100 p-8">
     <h3 class="text-2xl font-semibold mb-6 text-center">Projects</h3>
-  
     <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-      
-      <!-- Project 1 -->
       <div class="bg-white shadow p-4 rounded">
         <h4 class="text-xl font-bold">styleXyork</h4>
-        <p class="text-sm text-gray-600">
-          Fashion eCommerce site built using HTML, CSS, and JS. Showcases product listing and filters.
-        </p>
-        <a target="_blank" href="https://github.com/Navroop-ssandhu/Style-York" class="text-blue-500 underline mt-2 inline-block">
-          View Project on GitHub
-        </a>
+        <p class="text-sm text-gray-600">Fashion eCommerce site built using HTML, CSS, and JS. Showcases product listing and filters.</p>
+        <div class="flex flex-wrap gap-2 mt-3 text-sm">
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">HTML</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">CSS</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">JavaScript</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Frontend</span>
+        </div>
+        <a target="_blank" href="https://github.com/Navroop-ssandhu/Style-York" class="text-blue-500 underline mt-2 inline-block">View Project on GitHub</a>
       </div>
-  
-      <!-- Project 2 -->
+
       <div class="bg-white shadow p-4 rounded">
         <h4 class="text-xl font-bold text-black-700">Network Design – Tech Solutions Inc.</h4>
-        <p class="text-sm text-gray-600">
-          A comprehensive network infrastructure design for a medium-sized IT consulting firm with 200+ employees across multiple departments. The project includes IP schema planning, router-switch hierarchy, subnetting, VLAN segmentation, and scalability considerations.
-        </p>
+        <p class="text-sm text-gray-600">A comprehensive network infrastructure design for a medium-sized IT consulting firm with 200+ employees across multiple departments. The project includes IP schema planning, router-switch hierarchy, subnetting, VLAN segmentation, and scalability considerations.</p>
         <div class="flex flex-wrap gap-2 mt-3 text-sm">
           <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Cisco Packet Tracer</span>
           <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Networking</span>
@@ -240,94 +172,140 @@
           <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">VLAN</span>
           <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Documentation</span>
         </div>
-        <a href="https://github.com/Navroop-ssandhu/Network_design" target="_blank" rel="noopener noreferrer"
-           class="text-blue-600 underline mt-2 inline-block">
-          View Project on GitHub
-        </a>
+        <a href="https://github.com/Navroop-ssandhu/Network_design" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline mt-2 inline-block">View Project on GitHub</a>
+      </div>
+
+      <div class="bg-white shadow p-4 rounded">
+        <h4 class="text-xl font-bold">MongoDB E-commerce Database</h4>
+        <p class="text-sm text-gray-600">Built a MongoDB database for a simulated e-commerce store. Implemented schema design, data modeling, and CRUD operations with optimized queries for performance.</p>
+        <div class="flex flex-wrap gap-2 mt-3 text-sm">
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">MongoDB</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Database Design</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">CRUD</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Query Optimization</span>
+        </div>
+        <a href="https://github.com/Navroop-ssandhu/MongoDB-Project" target="_blank" class="text-blue-500 underline mt-2 inline-block">View Project on GitHub</a>
+      </div>
+
+      <div class="bg-white shadow p-4 rounded">
+        <h4 class="text-xl font-bold">Personal Portfolio Website</h4>
+        <p class="text-sm text-gray-600">Responsive portfolio site developed using HTML, Tailwind CSS, and JavaScript. Showcases my skills, certifications, and projects in a clean layout.</p>
+        <div class="flex flex-wrap gap-2 mt-3 text-sm">
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">HTML</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Tailwind CSS</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">JavaScript</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Responsive Design</span>
+        </div>
+        <a href="https://navroopsingh.com" target="_blank" class="text-blue-500 underline mt-2 inline-block">View Live Website</a>
+      </div>
+
+      <div class="bg-white shadow p-4 rounded">
+        <h4 class="text-xl font-bold">HubSpot CRM Implementation</h4>
+        <p class="text-sm text-gray-600">Configured and customized HubSpot CRM to streamline client interactions. Practiced contact management, automation, and analytics to improve workflow efficiency.</p>
+        <div class="flex flex-wrap gap-2 mt-3 text-sm">
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">HubSpot</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">CRM</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Automation</span>
+          <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded">Analytics</span>
+        </div>
+        <a href="https://www.coursera.org/account/accomplishments/verify/YPTMNO16IMHM" target="_blank" class="text-blue-500 underline mt-2 inline-block">View Details</a>
       </div>
     </div>
   </section>
 
-<!-- Skills Section -->
-<section id="skills" class="py-16 px-6 bg-white dark:bg-black">
+ <section id="skills" class="py-16 px-6 bg-black text-white">
   <div class="text-center mb-10">
-    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Skills</h2>
+    <h2 class="text-3xl font-bold">Skills</h2>
+    <p class="text-gray-300 text-sm mt-2">
+      Broad technical expertise across operating systems, networking, cloud, databases, ITSM tools, and troubleshooting.
+    </p>
   </div>
 
-  <div class="flex flex-wrap justify-center gap-4">
-    <!-- Each Skill -->
-    <span class="flex items-center gap-2 px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100">
-      🪟 Windows & Linux OS
-    </span>
-    <span class="flex items-center gap-2 px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100">
-      ☁️ Azure & GCP
-    </span>
-    <span class="flex items-center gap-2 px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100">
-      🗃️ MySQL, MongoDB, PostgreSQL
-    </span>
-    <span class="flex items-center gap-2 px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100">
-      🐍 Python
-    </span>
-    <span class="flex items-center gap-2 px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100">
-      🧰 Git, GitHub
-    </span>
-    <span class="flex items-center gap-2 px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100">
-      🛠️ ServiceNow, HubSpot, Jira
-    </span>
-    <span class="flex items-center gap-2 px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100">
-      📋 MS Office, Google Workspace
-    </span>
+  <div class="max-w-6xl mx-auto grid gap-8 md:grid-cols-2">
+
+    <div class="border border-gray-700 rounded-xl p-5">
+      <h3 class="text-lg font-semibold mb-4">Operating Systems</h3>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <span class="px-3 py-1.5 rounded-full bg-blue-600 text-white shadow-sm">🪟 Windows</span>
+        <span class="px-3 py-1.5 rounded-full bg-blue-600 text-white shadow-sm">🐧 Linux</span>
+        <span class="px-3 py-1.5 rounded-full bg-blue-600 text-white shadow-sm">🍏 macOS</span>
+        <span class="px-3 py-1.5 rounded-full bg-blue-600 text-white shadow-sm">📱 Mobile (iOS/Android)</span>
+      </div>
+    </div>
+
+    <div class="border border-gray-700 rounded-xl p-5">
+      <h3 class="text-lg font-semibold mb-4">Networking</h3>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <span class="px-3 py-1.5 rounded-full bg-green-600 text-white shadow-sm">🌐 TCP/IP</span>
+        <span class="px-3 py-1.5 rounded-full bg-green-600 text-white shadow-sm">📡 DNS & DHCP</span>
+        <span class="px-3 py-1.5 rounded-full bg-green-600 text-white shadow-sm">🔐 VPN & Firewalls</span>
+        <span class="px-3 py-1.5 rounded-full bg-green-600 text-white shadow-sm">📶 VLANs & Subnetting</span>
+        <span class="px-3 py-1.5 rounded-full bg-green-600 text-white shadow-sm">🖥️ Cisco Packet Tracer</span>
+        <span class="px-3 py-1.5 rounded-full bg-green-600 text-white shadow-sm">🛠️ Network Troubleshooting</span>
+      </div>
+    </div>
+
+    <div class="border border-gray-700 rounded-xl p-5">
+      <h3 class="text-lg font-semibold mb-4">Cloud & Virtualization</h3>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <span class="px-3 py-1.5 rounded-full bg-purple-600 text-white shadow-sm">☁️ Microsoft Azure</span>
+        <span class="px-3 py-1.5 rounded-full bg-purple-600 text-white shadow-sm">☁️ Google Cloud (GCP)</span>
+        <span class="px-3 py-1.5 rounded-full bg-purple-600 text-white shadow-sm">🖥️ Virtual Machines</span>
+        <span class="px-3 py-1.5 rounded-full bg-purple-600 text-white shadow-sm">📦 Containers (Docker basics)</span>
+      </div>
+    </div>
+
+    <div class="border border-gray-700 rounded-xl p-5">
+      <h3 class="text-lg font-semibold mb-4">Databases & Programming</h3>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <span class="px-3 py-1.5 rounded-full bg-yellow-600 text-black shadow-sm">🗃️ MySQL</span>
+        <span class="px-3 py-1.5 rounded-full bg-yellow-600 text-black shadow-sm">🗃️ PostgreSQL</span>
+        <span class="px-3 py-1.5 rounded-full bg-yellow-600 text-black shadow-sm">🗃️ MongoDB</span>
+        <span class="px-3 py-1.5 rounded-full bg-orange-600 text-white shadow-sm">🐍 Python</span>
+        <span class="px-3 py-1.5 rounded-full bg-orange-600 text-white shadow-sm">📜 Bash / Shell Scripting</span>
+      </div>
+    </div>
+
+    <div class="border border-gray-700 rounded-xl p-5">
+      <h3 class="text-lg font-semibold mb-4">ITSM & Tools</h3>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <span class="px-3 py-1.5 rounded-full bg-pink-600 text-white shadow-sm">🛠️ ServiceNow</span>
+        <span class="px-3 py-1.5 rounded-full bg-pink-600 text-white shadow-sm">🛠️ HubSpot</span>
+        <span class="px-3 py-1.5 rounded-full bg-pink-600 text-white shadow-sm">🛠️ Jira</span>
+        <span class="px-3 py-1.5 rounded-full bg-red-600 text-white shadow-sm">🧰 Git & GitHub</span>
+        <span class="px-3 py-1.5 rounded-full bg-red-600 text-white shadow-sm">📋 Microsoft 365</span>
+        <span class="px-3 py-1.5 rounded-full bg-red-600 text-white shadow-sm">📋 Google Workspace</span>
+      </div>
+    </div>
+
+    <div class="border border-gray-700 rounded-xl p-5">
+      <h3 class="text-lg font-semibold mb-4">Hardware, Security & Troubleshooting</h3>
+      <div class="flex flex-wrap gap-3 text-sm">
+        <span class="px-3 py-1.5 rounded-full bg-indigo-600 text-white shadow-sm">💻 PC Assembly</span>
+        <span class="px-3 py-1.5 rounded-full bg-indigo-600 text-white shadow-sm">🔧 Hardware Diagnostics</span>
+        <span class="px-3 py-1.5 rounded-full bg-indigo-600 text-white shadow-sm">🛠️ Peripheral Setup</span>
+        <span class="px-3 py-1.5 rounded-full bg-indigo-600 text-white shadow-sm">📡 Device Configuration</span>
+        <span class="px-3 py-1.5 rounded-full bg-gray-600 text-white shadow-sm">🔐 Endpoint Security</span>
+        <span class="px-3 py-1.5 rounded-full bg-gray-600 text-white shadow-sm">🛡️ Malware Removal</span>
+        <span class="px-3 py-1.5 rounded-full bg-gray-600 text-white shadow-sm">🧑‍💻 Troubleshooting</span>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- Interests Section -->
-<section id="interests" class="py-16 px-6 bg-white dark:bg-black">
-  <div class="text-center mb-10">
-    <h2 class="text-3xl font-bold text-gray-900 dark:text-white">Interests</h2>
-  </div>
-
-  <div class="flex flex-wrap justify-center gap-4">
-    <span class="px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100">
-      🧑‍💻 IT Support & Ticketing Systems
-    </span>
-    <span class="px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-100">
-      ☁️ Cloud Services & Virtualization
-    </span>
-    <span class="px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-yellow-100 text-yellow-900 dark:bg-yellow-800 dark:text-yellow-100">
-      📊 Databases & Data Entry Automation
-    </span>
-    <span class="px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-pink-100 text-pink-700 dark:bg-pink-900 dark:text-pink-100">
-      🧑‍🏫 EdTech & Remote Support Tools
-    </span>
-    <span class="px-4 py-2 rounded-full shadow hover:scale-105 transition text-sm bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-100">
-      🌐 Web & Network Infrastructure
-    </span>
-  </div>
-</section>
-
-  
-  <!-- Contact -->
   <section id="contact" class="bg-blue-50 p-8 text-center">
     <h3 class="text-2xl font-semibold mb-4">Contact Me</h3>
     <div class="flex justify-center mt-4">
-        <p class="flex items-center gap-2 text-center">
-          ✉️
-          <a target="_blank"  class="underline text-blue-600">
-            navroopsandhu825@gmail.com
-          </a>
-          <button onclick="copyEmail()" class="text-sm text-gray-600 hover:text-blue-600" title="Copy Email">
-            📋
-          </button>
-          <span id="copied-text" class="text-green-600 text-sm hidden">Copied!</span>
-        </p>
-      </div>
+      <p class="flex items-center gap-2 text-center">
+        ✉️
+        <a target="_blank" class="underline text-blue-600">navroopsingh013@gmail.com</a>
+        <button onclick="copyEmail()" class="text-sm text-gray-600 hover:text-blue-600" title="Copy Email">📋</button>
+        <span id="copied-text" class="text-green-600 text-sm hidden">Copied!</span>
+      </p>
+    </div>
     <p>🔗 <a target="_blank" href="https://ca.linkedin.com/in/navroop-singh-445602286" class="underline text-blue-600">LinkedIn</a> | <a target="_blank" href="https://github.com/Navroop-ssandhu" class="underline text-blue-600">GitHub</a></p>
   </section>
 
-  <!-- Footer -->
-  <footer class="text-center text-sm py-4 bg-gray-200">
-    © 2025 Navroop Singh. All rights reserved.
-  </footer>
-
+  <footer class="text-center text-sm py-4 bg-gray-200">© 2025 Navroop Singh. All rights reserved.</footer>
 </body>
 </html>
